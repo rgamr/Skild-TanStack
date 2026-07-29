@@ -1,4 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import SkillCard from "#/components/SkillCard";
+import { dummySkills } from "#/lib/dummy-skills";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Terminal } from "lucide-react";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -17,7 +20,39 @@ function Home() {
 						workspace.
 					</p>
 				</div>
+
+				<div className="actions">
+					<Link to="/skills" className="btn-primary">
+						<Terminal size={18} />
+						<span>Browse Registry</span>
+					</Link>
+					<Link to="/skills/new" className="btn-secondary">
+						Publish Skill
+					</Link>
+				</div>
+			</section>
+			<section className="latest">
+				<div className="space-y-2">
+					<h2>
+						Recently Created
+						<span className="text-gradient"> Skills</span>
+					</h2>
+					<p>
+						Latest skills loaded from database in descending creation order.
+					</p>
+				</div>
+				<div>
+					{dummySkills.length > 0 ? (
+						<div className="skills-grid">
+							{dummySkills.map((skill) => (
+								<SkillCard key={skill.id} {...skill} />
+							))}
+						</div>
+					) : (
+						<p> No Skills Have Been Created Yet</p>
+					)}
+				</div>
 			</section>
 		</div>
-  );
+	);
 }

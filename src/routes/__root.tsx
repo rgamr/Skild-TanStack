@@ -52,7 +52,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			</head>
 			<body className="font-sans antialiased wrap-anywhere">
 				<ClerkProvider>
-					<div className="root-layout">
+					<div id="root-layout">
 						<header>
 							<div className="frame">
 								<Navbar />

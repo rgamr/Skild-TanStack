@@ -4,53 +4,7 @@
 
 @import 'tw-animate-css';
 
-@custom-variant dark (&:is(.dark *));
-
 :root {
-  --background: #050505;
-  --foreground: #f9fafb;
-  --card: #0a0a0a;
-  --card-foreground: #f9fafb;
-  --popover: #111111;
-  --popover-foreground: #f9fafb;
-  --primary: #c4b5fd;
-  --primary-foreground: #050505;
-  --secondary: #141414;
-  --secondary-foreground: #f9fafb;
-  --muted: #0f0f0f;
-  --muted-foreground: #71717a;
-  --accent: #0f0f0f;
-  --accent-foreground: #f9fafb;
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
-  --border: #1a1a1a;
-  --input: #141414;
-  --ring: #c4b5fd;
-  --chart-1: #c4b5fd;
-  --chart-2: #8b5cf6;
-  --chart-3: #f97316;
-  --chart-4: #60a5fa;
-  --chart-5: #71717a;
-  --sidebar: #0a0a0a;
-  --sidebar-foreground: #f9fafb;
-  --sidebar-primary: #c4b5fd;
-  --sidebar-primary-foreground: #050505;
-  --sidebar-accent: #141414;
-  --sidebar-accent-foreground: #f9fafb;
-  --sidebar-border: #1a1a1a;
-  --sidebar-ring: #c4b5fd;
-
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
-  --font-serif: "Times New Roman", serif;
-
-  --radius: 0.375rem;
-  --tracking-normal: -0.02em;
-
-  --brand-secondary: #8b5cf6;
-}
-
-.dark {
   --background: #050505;
   --foreground: #f9fafb;
   --card: #0a0a0a;
@@ -205,11 +159,11 @@
     }
 
     & > header > .frame > svg:first-of-type {
-      @apply -bottom-1.5 -left-1.5;
+      @apply -bottom-1.5 -left-[5px];
     }
 
     & > header > .frame > svg:last-of-type {
-      @apply -bottom-1.5 -right-1.5;
+      @apply -bottom-1.5 -right-[5px];
     }
 
     & > main {
